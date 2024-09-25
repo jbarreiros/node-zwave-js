@@ -56,7 +56,7 @@ export function compareStrings(a: string, b: string): number;
 // Warning: (ae-missing-release-tag) "Constructor" is part of the package's API, but it is missing a release tag (@alpha, @beta, @public, or @internal)
 //
 // @public (undocumented)
-export type Constructor<T = {}> = new (...args: any[]) => T;
+export type Constructor<T = object> = new (...args: any[]) => T;
 
 // Warning: (ae-missing-release-tag) "cpp2js" is part of the package's API, but it is missing a release tag (@alpha, @beta, @public, or @internal)
 //
@@ -177,7 +177,7 @@ export type JSONObject = Record<string, any>;
 // Warning: (ae-missing-release-tag) "keysOf" is part of the package's API, but it is missing a release tag (@alpha, @beta, @public, or @internal)
 //
 // @public
-export function keysOf<T extends {}>(obj: T): (keyof T)[];
+export function keysOf<T extends object>(obj: T): (keyof T)[];
 
 // Warning: (ae-missing-release-tag) "mergeDeep" is part of the package's API, but it is missing a release tag (@alpha, @beta, @public, or @internal)
 //
